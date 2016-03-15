@@ -3,14 +3,14 @@
     name = Karl Kallavus
 
 [alias]
-st = status
-hist = log --oneline --graph --all --decorate
-hr = log --oneline --graph --all --decorate -n 30
-co = checkout
-ci = commit
-br = branch
-ds = diff --staged
+    st = status
+    hist = log --oneline --graph --all --decorate
+    hr = log --oneline --graph --all --decorate -n 30
+    co = checkout
+    ci = commit
+    br = branch
+    ds = diff --staged
 
 [push]
-default = simple
+    default = simple
 
