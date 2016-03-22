@@ -9,3 +9,5 @@ source ~/.git-completion.bash
 alias l='ls'
 alias la='ls -a'
 
+alias g='git'
+
