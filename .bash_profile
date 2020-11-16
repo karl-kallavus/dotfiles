@@ -1,10 +1,9 @@
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+function parse_git_branch() {
+    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
 }
 
-export PS1="\u \[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
-
-source ~/.git-completion.bash
+setopt PROMPT_SUBST
+export PROMPT='%F{grey}%n%f %F{cyan}%~%f %F{green}$(parse_git_branch)%f %F{normal}$%f '
 
 alias l='ls'
 alias la='ls -a'
